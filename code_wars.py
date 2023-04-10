@@ -65,3 +65,65 @@ def grow(arr):
     for i in arr:
         mult *= i
     return mult
+
+
+def opposite(number):
+    if number < 0:
+        number = str(number)
+        number = number.split('-')
+        number = number[1]
+        number = eval(number)
+        return number
+    if number > 0:
+        number = str(number)
+        number = "-" + number
+        number = eval(number)
+        number = float(number)
+        return number
+    elif number == 0:
+        return 0
+    
+
+# Your task is to create a function that does four basic mathematical operations.
+
+# The function should take three arguments - operation(string/char), value1(number), value2(number).
+# The function should return result of numbers after applying the chosen operation.
+
+# Examples(Operator, value1, value2) --> output
+
+def basic_op(operator, value1, value2):
+    if operator == '+':
+        sum = value1 + value2
+        return sum 
+
+    if operator == '-':
+        sum = value1 - value2
+        return sum 
+
+    if operator == '*':
+        sum = value1 * value2
+        return sum
+
+    if operator == '/':
+        sum = value1 / value2
+        return sum 
+    
+def quarter_of(month):
+        if 1<= month <= 3:
+            return 1
+        elif  month <= 6 and month > 3:
+            return 2
+        elif month <= 9 and month > 6:
+            return 3
+        elif  month <= 12 and month >= 9:
+            return 4
+print(quarter_of(8))
+
+
+def better_than_average(class_points, your_points):
+    class_sum = sum(class_points)
+    class_avg = class_sum/len(class_points)
+    if your_points > class_avg:
+        return True
+    else:
+        return False
