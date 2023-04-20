@@ -162,3 +162,10 @@ def xo(s):
     if x_count == o_count:
             return True
     else: return False
+
+def friend(x):
+    friend = []
+    for i in x:
+        if len(i) == 4:
+            friend.append(i)
+    return friend
