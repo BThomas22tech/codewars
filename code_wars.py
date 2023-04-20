@@ -142,3 +142,23 @@ def square_sum(numbers):
     for i in numbers:
         sum = sum + i*i
     return sum 
+
+def count_by(x, n):
+    num = []
+    for i in range(1,n+1):
+        results = x * i
+        num.append(results)
+    return num
+
+
+def xo(s):
+    x_count = 0
+    o_count = 0
+    for i in range(len(s)):
+        if s[i] == "x" or s[i] == "X":
+            x_count += 1
+        elif s[i] == "o" or s[i]=="O":
+            o_count += 1
+    if x_count == o_count:
+            return True
+    else: return False
