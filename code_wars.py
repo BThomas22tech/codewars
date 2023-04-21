@@ -169,3 +169,12 @@ def friend(x):
         if len(i) == 4:
             friend.append(i)
     return friend
+#sum a two digit number ex. 11 = 2
+def solution(n):
+    n = str(n)
+    number = int(n[0]) + int(n[1])
+    number = int(number)
+    return number
+print(solution(11))
+print(solution(33))
+print(solution(14))
