@@ -173,7 +173,6 @@ def friend(x):
 def solution(n):
     n = str(n)
     number = int(n[0]) + int(n[1])
-    number = int(number)
     return number
 print(solution(11))
 print(solution(33))
