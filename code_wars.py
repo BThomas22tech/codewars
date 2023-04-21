@@ -177,3 +177,37 @@ def solution(n):
 print(solution(11))
 print(solution(33))
 print(solution(14))
+def solution(input):
+    num = str(input)
+    for num in input:
+        if num == num :
+            return True
+        
+print(solution([1,1]))
+
+def get_sum(a,b):
+    #use sum variable
+    sum = 0
+    if a == b:
+        return a
+    #looop with range
+    elif a > b:
+        for i in range(b,a+1):
+            sum += i
+        return sum
+    else:
+        for i in range(a,b+1):
+            sum += i
+        return sum
+    
+
+def sum_two_smallest_numbers(numbers):
+    #use sort function
+    numbers.sort()
+    #get number by index
+    num1 = numbers[0]
+    num2 = numbers[1]
+    #add numbers to sum
+    sum = num1 + num2
+    #return sum
+    return sum
