@@ -292,6 +292,36 @@ def unique(string):
         else: print(k, "is not unique")
     return dict
 
-print(unique("high"))
-print(unique("cool"))
-print(unique("egg"))
+# print(unique("high"))
+# print(unique("cool"))
+# print(unique("egg"))
+
+# given two strings write a method to decide if one is a permutation of the other.
+def permutation(string1,string2):
+    if len(string1) != len(string2):
+        return False
+    list_one = list(string1)
+    list_one.sort()
+    list_two = list(string2)
+    list_two.sort()
+    if list_one == list_two:
+        return True
+    else: return False
+    # return [list_one,list_two]
+print(permutation("dog","dgo"))
+print(permutation("car","dog"))
+
+# write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the "true" length of the string.
+
+def URLify(string):
+    list = []
+    for i in string:
+        if i == " ":
+            list.append("%20")
+        else:
+            list.append(i)
+    modified_string = ''.join(list)
+    return modified_string
+
+
+print(URLify("Mr John Smith  "))
