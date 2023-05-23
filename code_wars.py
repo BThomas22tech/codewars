@@ -325,3 +325,23 @@ def URLify(string):
 
 
 print(URLify("Mr John Smith  "))
+
+def is_pal_perm(input_string):
+    input_string = input_string.replace(" ","")
+    input_string = input_string.lower()
+    d = dict()
+    for i in input_string:
+        if i in d:
+            d[i] += 1
+        else: 
+            d[i] = 1
+    odd_count = 0
+    for key, value in d.items():
+        if value % 2 != 0 and odd_count == 0:
+            odd_count += 1
+        elif value % 2 != 0 and odd_count != 0:
+            return False
+    return True
+print(is_pal_perm("taco Cat"))
+print(is_pal_perm("racecar"))
+print(is_pal_perm("raceca"))
