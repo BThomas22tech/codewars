@@ -372,3 +372,17 @@ print(correct("L0ND0N"))
 print(correct("L0ND0N"))
 print(correct("DUBL1N"))
 print(correct("51NGAP0RE"))
+
+
+def stray(arr):
+    count_dict = {}
+    new_array = []
+    for i in arr:
+        new_array.append(i)
+        if i in count_dict:
+            count_dict[i] += 1
+        else:
+            count_dict[i] = 1
+    for num,count in count_dict.items():
+        if count == 1:
+            return num
