@@ -353,3 +353,22 @@ def add_binary(a,b):
 print(add_binary(1,1))
 print(add_binary(1,3))
 print(add_binary(5,1))
+
+
+def correct(s):
+    new_string = ''
+    for i in s:
+        if i == "0":
+            new_string += "O"
+        elif i == "5":
+            new_string += "S"
+        elif i == "1":
+            new_string += "I"
+        else:
+            new_string += i
+    return new_string
+
+print(correct("L0ND0N"))
+print(correct("L0ND0N"))
+print(correct("DUBL1N"))
+print(correct("51NGAP0RE"))
