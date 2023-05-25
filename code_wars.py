@@ -350,3 +350,6 @@ def add_binary(a,b):
     sum = a + b
     binary = bin(sum)[2:]
     return binary
+print(add_binary(1,1))
+print(add_binary(1,3))
+print(add_binary(5,1))
