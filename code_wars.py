@@ -342,6 +342,11 @@ def is_pal_perm(input_string):
         elif value % 2 != 0 and odd_count != 0:
             return False
     return True
-print(is_pal_perm("taco Cat"))
+print(is_pal_perm("tact Coa"))
 print(is_pal_perm("racecar"))
 print(is_pal_perm("raceca"))
+
+def add_binary(a,b):
+    sum = a + b
+    binary = bin(sum)[2:]
+    return binary
