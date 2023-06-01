@@ -386,3 +386,28 @@ def stray(arr):
     for num,count in count_dict.items():
         if count == 1:
             return num
+
+def century(year):
+    if year%100==0:
+        return year//100
+    else:
+        return year//100+1
+print(century(1705))
+
+
+def get_volume_of_cuboid(length, width, height):
+    V = length * width * height
+    
+    return V
+
+def string_to_array(s):
+    word = s.split()
+    empty = s.split(" ")
+    
+
+    return empty
+
+def hoop_count(n):
+    if n >= 10:
+        return "Great, now move on to tricks"
+    else: return "Keep at it until you get it"
