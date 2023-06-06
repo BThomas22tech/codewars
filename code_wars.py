@@ -416,3 +416,21 @@ def smash(words):
     s =" ".join(words)
     return s
 #takes individual words from an array and puts them into a sentence
+
+def check_for_factor(base, factor):
+    if base % factor != 0:
+        return False
+    if base % factor == 0:
+        return True
+
+def area_or_perimeter(l , w):
+    if l == w:
+        A = l * w
+        return A
+    if l != w:
+        P = (l + w) *2
+        return P
+
+def string_to_number(s):
+    s = int(s)
+    return s
