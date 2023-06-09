@@ -434,3 +434,25 @@ def area_or_perimeter(l , w):
 def string_to_number(s):
     s = int(s)
     return s
+
+
+
+def string_compression(string):
+    compressed_string = ""
+    current_letter = string[0]
+    count = 1
+
+    for i in range(1, len(string)):
+        if string[i] == current_letter:
+            count += 1
+        else:
+            compressed_string += current_letter + str(count)
+            current_letter = string[i]
+            count = 1
+    # Add the count of the last letter
+    compressed_string += current_letter + str(count)
+
+    return compressed_string
+print(string_compression("bcd"))
+print(string_compression("aabcccaaa"))
+
