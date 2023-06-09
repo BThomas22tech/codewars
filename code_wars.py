@@ -456,3 +456,26 @@ def string_compression(string):
 print(string_compression("bcd"))
 print(string_compression("aabcccaaa"))
 
+def binary_search(input_array, value):
+    right = len(input_array) -1
+    left = 0
+   
+    while left <= right:
+        mid = (left + right) // 2
+       
+        if input_array[mid] == value:
+           return mid
+        elif input_array[mid] < value:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+def get_fib(position):
+    if position == 0:
+        return 0
+    if position == 1:
+        return 1
+    else:
+        output = get_fib(position - 1) + get_fib(position -2)
+        return output
