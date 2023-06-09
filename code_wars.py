@@ -479,3 +479,16 @@ def get_fib(position):
     else:
         output = get_fib(position - 1) + get_fib(position -2)
         return output
+
+def quicksort(array):
+    if len(array) < 1:
+        return array
+    pivot = array[0]
+    left = [x for x in array[1:] if x < pivot]
+    right = [x for x in array[1:] if x >= pivot]
+
+    return quicksort(left) + [pivot] + quicksort(right)
+   
+
+test = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
+print quicksort(test)
