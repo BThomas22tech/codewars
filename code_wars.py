@@ -492,3 +492,59 @@ def quicksort(array):
 
 test = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
 print quicksort(test)
+
+"""Time to play with Python dictionaries!
+You're going to work on a dictionary that
+stores cities by country and continent.
+One is done for you - the city of Mountain 
+View is in the USA, which is in North America.
+
+You need to add the cities listed below by
+modifying the structure.
+Then, you should print out the values specified
+by looking them up in the structure.
+
+Cities to add:
+Bangalore (India, Asia)
+Atlanta (USA, North America)
+Cairo (Egypt, Africa)
+Shanghai (China, Asia)"""
+
+locations = {'North_America': {'USA': ['Mountain View','Atlanta']},
+"Asia": {'India': ['Bangalore'], 'China':['Shanghai']
+}}
+asia1city = locations['Asia']['India']
+asia2city = locations['Asia']['China']
+asiacountry = locations['Asia']
+usa = locations['North_America']['USA']
+usa.sort()
+USA_City = ''
+# for key,value in locations.items():
+#     if key == 'USA':
+#       # print(key,value)
+print("1")     
+for city in usa:
+    USA_City += city + "\n"
+print(USA_City)
+
+print("2")
+asia_cities = []
+for country, cities in locations['Asia'].items():
+    for city in cities:
+        asia_cities.append((city, country))
+asia_cities.sort()
+for city, country in asia_cities:
+    print(city + "-" + country)
+"""Print the following (using "print").
+1. A list of all cities in the USA in
+alphabetic order.
+2. All cities in Asia, in alphabetic
+order, next to the name of the country.
+In your output, label each answer with a number
+so it looks like this:
+1
+American City
+American City
+2
+Asian City - Country
+Asian City - Country"""
