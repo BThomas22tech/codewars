@@ -621,3 +621,23 @@ def sockMerchant(n, ar):
         count += color_count_value // 2
     
     return count
+
+def reverse_vowel(string):
+  vowels_list = ['a','e','i','o','u']
+  new_string = ""
+  vowel_indices =[]
+  for i in string:
+    if i in vowels_list:
+      vowel_indices.append(i)
+  
+  for i in string:
+      if i in vowels_list:
+        new_string += vowel_indices.pop()
+      else:
+        new_string += i
+  return new_string
+ 
+
+
+print(reverse_vowel("hello"))
+print(reverse_vowel("python"))
