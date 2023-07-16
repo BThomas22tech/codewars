@@ -641,3 +641,21 @@ def reverse_vowel(string):
 
 print(reverse_vowel("hello"))
 print(reverse_vowel("python"))
+
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY a
+#  2. INTEGER_ARRAY b
+#
+
+def compareTriplets(a, b):
+    count = 0
+    count2 = 0
+    for i in range(len(a)):
+        if a[i] == b[i]:
+            continue
+        if a[i] > b[i]:
+            count += 1
+        if a[i] < b[i]:
+            count2 += 1
+    return count, count2
