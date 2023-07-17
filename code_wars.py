@@ -750,3 +750,28 @@ def birthdayCakeCandles(candles):
     for key, value in dict.items():
         if value > 1:
             return value
+
+
+
+def timeConversion(s):
+    zone = s[-2:]
+    time = s[:2]
+    print(time)
+    minutes = s[2:-2]
+    hour = 0
+    
+    if zone == "PM" and int(time) ==12:
+        new_time = str(time) +str(minutes)
+        return new_time
+    if zone == "PM":
+        hour += int(time) + 12
+        new_time = str(hour) + str(minutes)
+        print(new_time)
+        return new_time
+    
+    if zone == "AM" and int(time) == 12:
+        new_time = '00' +str(minutes)
+        return new_time
+        
+    else:
+        return str(time) + str(minutes)
