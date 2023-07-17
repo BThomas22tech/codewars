@@ -1,28 +1,41 @@
 def even_or_odd(number):
     if number % 2 == 0:
         return "Even"
-    else: return "Odd"
+    else:
+        return "Odd"
+
 
 print(even_or_odd(5))
 print(even_or_odd(6))
 print(even_or_odd(-36))
-#write a function that greets the owner with hello boss, and a guest with hello guest
+# write a function that greets the owner with hello boss, and a guest with hello guest
+
+
 def greet(name, owner):
     if name == owner:
         return "Hello boss"
-    else: return "Hello guest"
-print(greet("tom","tom"))
-print(greet("tom","Brandon"))
-print(greet("tim","tim"))
+    else:
+        return "Hello guest"
+
+
+print(greet("tom", "tom"))
+print(greet("tom", "Brandon"))
+print(greet("tim", "tim"))
 
 # Write a function `greet` that returns "hello world!"
+
+
 def greet():
     return "hello world!"
+
+
 print(greet())
 
-#make positive numbers negative, negative numbers stay the same, zero is zero
-def make_negative( number ):
-    
+# make positive numbers negative, negative numbers stay the same, zero is zero
+
+
+def make_negative(number):
+
     if number > 0:
         number = str(number)
         number = "-" + number
@@ -32,17 +45,23 @@ def make_negative( number ):
         return number
     elif number == 0:
         return 0
+
+
 print(make_negative(4))
 print(make_negative(-3))
 print(make_negative(-12))
 print(make_negative(1))
+
 
 def find_average(numbers):
     sum = 0
     for i in numbers:
         sum += i
     return sum / len(numbers)
+
+
 print(find_average([1, 2, 3]))
+
 
 def bmi(weight, height):
     bmi = weight / (height * height)
@@ -54,12 +73,16 @@ def bmi(weight, height):
         return "Overweight"
     if bmi > 30:
         return "Obese"
+
+
 print(bmi(50, 1.80))
 print(bmi(80, 1.80))
 print(bmi(110, 1.80))
 
 # Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 # [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+
 def grow(arr):
     mult = 1
     for i in arr:
@@ -82,7 +105,7 @@ def opposite(number):
         return number
     elif number == 0:
         return 0
-    
+
 
 # Your task is to create a function that does four basic mathematical operations.
 
@@ -94,11 +117,11 @@ def opposite(number):
 def basic_op(operator, value1, value2):
     if operator == '+':
         sum = value1 + value2
-        return sum 
+        return sum
 
     if operator == '-':
         sum = value1 - value2
-        return sum 
+        return sum
 
     if operator == '*':
         sum = value1 * value2
@@ -106,17 +129,20 @@ def basic_op(operator, value1, value2):
 
     if operator == '/':
         sum = value1 / value2
-        return sum 
-    
+        return sum
+
+
 def quarter_of(month):
-        if 1<= month <= 3:
-            return 1
-        elif  month <= 6 and month > 3:
-            return 2
-        elif month <= 9 and month > 6:
-            return 3
-        elif  month <= 12 and month >= 9:
-            return 4
+    if 1 <= month <= 3:
+        return 1
+    elif month <= 6 and month > 3:
+        return 2
+    elif month <= 9 and month > 6:
+        return 3
+    elif month <= 12 and month >= 9:
+        return 4
+
+
 print(quarter_of(8))
 
 
@@ -132,8 +158,11 @@ def better_than_average(class_points, your_points):
 
 # [Make sure you type the exact thing I wrote or the program may not execute properly]
 
+
 def greet(name):
     return f"Hello, {name} how are you doing today?"
+
+
 print(greet("John"))
 
 
@@ -141,11 +170,12 @@ def square_sum(numbers):
     sum = 0
     for i in numbers:
         sum = sum + i*i
-    return sum 
+    return sum
+
 
 def count_by(x, n):
     num = []
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         results = x * i
         num.append(results)
     return num
@@ -157,11 +187,13 @@ def xo(s):
     for i in range(len(s)):
         if s[i] == "x" or s[i] == "X":
             x_count += 1
-        elif s[i] == "o" or s[i]=="O":
+        elif s[i] == "o" or s[i] == "O":
             o_count += 1
     if x_count == o_count:
-            return True
-    else: return False
+        return True
+    else:
+        return False
+
 
 def friend(x):
     friend = []
@@ -169,47 +201,55 @@ def friend(x):
         if len(i) == 4:
             friend.append(i)
     return friend
-#sum a two digit number ex. 11 = 2
+# sum a two digit number ex. 11 = 2
+
+
 def solution(n):
     n = str(n)
     number = int(n[0]) + int(n[1])
     return number
+
+
 print(solution(11))
 print(solution(33))
 print(solution(14))
+
+
 def solution(input):
     num = str(input)
     for num in input:
-        if num == num :
+        if num == num:
             return True
-        
-print(solution([1,1]))
 
-def get_sum(a,b):
-    #use sum variable
+
+print(solution([1, 1]))
+
+
+def get_sum(a, b):
+    # use sum variable
     sum = 0
     if a == b:
         return a
-    #looop with range
+    # looop with range
     elif a > b:
-        for i in range(b,a+1):
+        for i in range(b, a+1):
             sum += i
         return sum
     else:
-        for i in range(a,b+1):
+        for i in range(a, b+1):
             sum += i
         return sum
-    
+
 
 def sum_two_smallest_numbers(numbers):
-    #use sort function
+    # use sort function
     numbers.sort()
-    #get number by index
+    # get number by index
     num1 = numbers[0]
     num2 = numbers[1]
-    #add numbers to sum
+    # add numbers to sum
     sum = num1 + num2
-    #return sum
+    # return sum
     return sum
 
 #     You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
@@ -217,6 +257,8 @@ def sum_two_smallest_numbers(numbers):
 # Write a program that returns the girl's age (0-9) as an integer.
 
 # Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+
 def get_age(age):
     number = int(age[0])
     print(number)
@@ -228,68 +270,70 @@ def get_age(age):
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         while headA != headB:
             if headA == None:
                 headA = headB
-            else: 
+            else:
                 headA = headA.next
             if headB == None:
                 headB = headA
-            else: 
+            else:
                 headB = headB.next
 
         # return headA
-    
-        a=headA
-        b=headB
-        while a!=b:
-            if a==None:
-                a=headB
+
+        a = headA
+        b = headB
+        while a != b:
+            if a == None:
+                a = headB
             else:
-                a=a.next
-            if b==None:
-                b=headA
+                a = a.next
+            if b == None:
+                b = headA
             else:
-                b=b.next
+                b = b.next
         return a
 
 
 def unique(string):
-    dict = {"a":0,
-            "b":0,
-            "c":0,
-            "d":0,
-            "e":0,
-            "f":0,
-            "g":0,
-            "h":0, 
-            "i":0, 
-            "j":0,
-            "k":0,
-            "l":0,
-            "m":0,
-            "n":0,
-            "o":0,
-            "p":0,
+    dict = {"a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 0,
+            "i": 0,
+            "j": 0,
+            "k": 0,
+            "l": 0,
+            "m": 0,
+            "n": 0,
+            "o": 0,
+            "p": 0,
             "q": 0,
-            "r":0,
-            "s":0,
-            "t":0,
-            "u":0,
-            "v":0,
-            "w":0,
-            "x":0,
-            "y":0,
-            "z":0}
+            "r": 0,
+            "s": 0,
+            "t": 0,
+            "u": 0,
+            "v": 0,
+            "w": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0}
     for i in string:
         if i in dict:
             dict[i] += 1
     for k in dict:
         if dict[k] <= 1:
             print(k, "is unique")
-        else: print(k, "is not unique")
+        else:
+            print(k, "is not unique")
     return dict
 
 # print(unique("high"))
@@ -297,7 +341,9 @@ def unique(string):
 # print(unique("egg"))
 
 # given two strings write a method to decide if one is a permutation of the other.
-def permutation(string1,string2):
+
+
+def permutation(string1, string2):
     if len(string1) != len(string2):
         return False
     list_one = list(string1)
@@ -306,12 +352,15 @@ def permutation(string1,string2):
     list_two.sort()
     if list_one == list_two:
         return True
-    else: return False
+    else:
+        return False
+
     # return [list_one,list_two]
-print(permutation("dog","dgo"))
-print(permutation("car","dog"))
+print(permutation("dog", "dgo"))
+print(permutation("car", "dog"))
 
 # write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the "true" length of the string.
+
 
 def URLify(string):
     list = []
@@ -326,14 +375,15 @@ def URLify(string):
 
 print(URLify("Mr John Smith  "))
 
+
 def is_pal_perm(input_string):
-    input_string = input_string.replace(" ","")
+    input_string = input_string.replace(" ", "")
     input_string = input_string.lower()
     d = dict()
     for i in input_string:
         if i in d:
             d[i] += 1
-        else: 
+        else:
             d[i] = 1
     odd_count = 0
     for key, value in d.items():
@@ -342,17 +392,22 @@ def is_pal_perm(input_string):
         elif value % 2 != 0 and odd_count != 0:
             return False
     return True
+
+
 print(is_pal_perm("tact Coa"))
 print(is_pal_perm("racecar"))
 print(is_pal_perm("raceca"))
 
-def add_binary(a,b):
+
+def add_binary(a, b):
     sum = a + b
     binary = bin(sum)[2:]
     return binary
-print(add_binary(1,1))
-print(add_binary(1,3))
-print(add_binary(5,1))
+
+
+print(add_binary(1, 1))
+print(add_binary(1, 3))
+print(add_binary(5, 1))
 
 
 def correct(s):
@@ -367,6 +422,7 @@ def correct(s):
         else:
             new_string += i
     return new_string
+
 
 print(correct("L0ND0N"))
 print(correct("L0ND0N"))
@@ -383,39 +439,46 @@ def stray(arr):
             count_dict[i] += 1
         else:
             count_dict[i] = 1
-    for num,count in count_dict.items():
+    for num, count in count_dict.items():
         if count == 1:
             return num
 
+
 def century(year):
-    if year%100==0:
+    if year % 100 == 0:
         return year//100
     else:
         return year//100+1
+
+
 print(century(1705))
 
 
 def get_volume_of_cuboid(length, width, height):
     V = length * width * height
-    
+
     return V
+
 
 def string_to_array(s):
     word = s.split()
     empty = s.split(" ")
-    
 
     return empty
+
 
 def hoop_count(n):
     if n >= 10:
         return "Great, now move on to tricks"
-    else: return "Keep at it until you get it"
+    else:
+        return "Keep at it until you get it"
+
 
 def smash(words):
-    s =" ".join(words)
+    s = " ".join(words)
     return s
-#takes individual words from an array and puts them into a sentence
+# takes individual words from an array and puts them into a sentence
+
 
 def check_for_factor(base, factor):
     if base % factor != 0:
@@ -423,18 +486,19 @@ def check_for_factor(base, factor):
     if base % factor == 0:
         return True
 
-def area_or_perimeter(l , w):
+
+def area_or_perimeter(l, w):
     if l == w:
         A = l * w
         return A
     if l != w:
-        P = (l + w) *2
+        P = (l + w) * 2
         return P
+
 
 def string_to_number(s):
     s = int(s)
     return s
-
 
 
 def string_compression(string):
@@ -453,23 +517,27 @@ def string_compression(string):
     compressed_string += current_letter + str(count)
 
     return compressed_string
+
+
 print(string_compression("bcd"))
 print(string_compression("aabcccaaa"))
 
+
 def binary_search(input_array, value):
-    right = len(input_array) -1
+    right = len(input_array) - 1
     left = 0
-   
+
     while left <= right:
         mid = (left + right) // 2
-       
+
         if input_array[mid] == value:
-           return mid
+            return mid
         elif input_array[mid] < value:
             left = mid + 1
         else:
             right = mid - 1
     return -1
+
 
 def get_fib(position):
     if position == 0:
@@ -477,8 +545,9 @@ def get_fib(position):
     if position == 1:
         return 1
     else:
-        output = get_fib(position - 1) + get_fib(position -2)
+        output = get_fib(position - 1) + get_fib(position - 2)
         return output
+
 
 def quicksort(array):
     if len(array) < 1:
@@ -488,7 +557,7 @@ def quicksort(array):
     right = [x for x in array[1:] if x >= pivot]
 
     return quicksort(left) + [pivot] + quicksort(right)
-   
+
 
 test = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
 print quicksort(test)
@@ -510,9 +579,9 @@ Atlanta (USA, North America)
 Cairo (Egypt, Africa)
 Shanghai (China, Asia)"""
 
-locations = {'North_America': {'USA': ['Mountain View','Atlanta']},
-"Asia": {'India': ['Bangalore'], 'China':['Shanghai']
-}}
+locations = {'North_America': {'USA': ['Mountain View', 'Atlanta']},
+             "Asia": {'India': ['Bangalore'], 'China': ['Shanghai']
+                      }}
 asia1city = locations['Asia']['India']
 asia2city = locations['Asia']['China']
 asiacountry = locations['Asia']
@@ -522,7 +591,7 @@ USA_City = ''
 # for key,value in locations.items():
 #     if key == 'USA':
 #       # print(key,value)
-print("1")     
+print("1")
 for city in usa:
     USA_City += city + "\n"
 print(USA_City)
@@ -553,6 +622,7 @@ Asian City - Country"""
 in a hash table, where keys are calculated
 using the first two letters of the string."""
 
+
 class HashTable(object):
     def __init__(self):
         self.table = [None]*10000
@@ -582,8 +652,8 @@ class HashTable(object):
         hash value from a string."""
         hash_value = ord(string[0]) * 100 + ord(string[1])
         return hash_value
-    
-    
+
+
 # Setup
 hash_table = HashTable()
 
@@ -605,38 +675,39 @@ hash_table.store('UDACIOUS')
 # Should be 8568
 print hash_table.lookup('UDACIOUS')
 
+
 def sockMerchant(n, ar):
     count = 0
     color_count = {}
-    
+
     # Count the number of occurrences of each color
     for color in ar:
         if color in color_count:
             color_count[color] += 1
         else:
             color_count[color] = 1
-    
+
     # Count the number of pairs for each color
     for color_count_value in color_count.values():
         count += color_count_value // 2
-    
+
     return count
 
+
 def reverse_vowel(string):
-  vowels_list = ['a','e','i','o','u']
-  new_string = ""
-  vowel_indices =[]
-  for i in string:
-    if i in vowels_list:
-      vowel_indices.append(i)
-  
-  for i in string:
-      if i in vowels_list:
-        new_string += vowel_indices.pop()
-      else:
-        new_string += i
-  return new_string
- 
+    vowels_list = ['a', 'e', 'i', 'o', 'u']
+    new_string = ""
+    vowel_indices = []
+    for i in string:
+        if i in vowels_list:
+            vowel_indices.append(i)
+
+    for i in string:
+        if i in vowels_list:
+            new_string += vowel_indices.pop()
+        else:
+            new_string += i
+    return new_string
 
 
 print(reverse_vowel("hello"))
@@ -647,6 +718,7 @@ print(reverse_vowel("python"))
 #  1. INTEGER_ARRAY a
 #  2. INTEGER_ARRAY b
 #
+
 
 def compareTriplets(a, b):
     count = 0
@@ -667,11 +739,12 @@ def compareTriplets(a, b):
 # The function accepts INTEGER_ARRAY candles as parameter.
 #
 
+
 def birthdayCakeCandles(candles):
     dict = {}
     for candle in candles:
         if candle in dict:
-            dict[candle] +=1
+            dict[candle] += 1
         else:
             dict[candle] = 1
     for key, value in dict.items():
