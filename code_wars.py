@@ -659,3 +659,21 @@ def compareTriplets(a, b):
         if a[i] < b[i]:
             count2 += 1
     return count, count2
+
+#
+# Complete the 'birthdayCakeCandles' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY candles as parameter.
+#
+
+def birthdayCakeCandles(candles):
+    dict = {}
+    for candle in candles:
+        if candle in dict:
+            dict[candle] +=1
+        else:
+            dict[candle] = 1
+    for key, value in dict.items():
+        if value > 1:
+            return value
