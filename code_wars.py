@@ -776,7 +776,7 @@ def timeConversion(s):
     else:
         return str(time) + str(minutes)
     
-    def breakingRecords(scores):
+def breakingRecords(scores):
     first_score = scores[0]
     highest_score = first_score
     lowest_score = first_score
