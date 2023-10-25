@@ -789,7 +789,23 @@ def breakingRecords(scores):
             h_score_count += 1
         elif score < lowest_score and score != lowest_score:
             lowest_score = score
+
             l_score_count += 1
    
     
     return h_score_count,l_score_count
+# running sum of a 1D array
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+    # create a new array
+        new_array = []
+    # get value of first number 
+        sum = nums[0]
+    # append first number to array
+        new_array.append(nums[0])
+    # need to loop through array
+        for num in range(len(nums)-1):
+    # sum to be the value of sum and adds sum with next number in array
+            sum = sum + nums[num+1] 
+            new_array.append(sum)
+        return new_array
